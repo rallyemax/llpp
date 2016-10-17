@@ -5526,9 +5526,9 @@ let viewmouse button down x y mask =
                 let incr =
                   match n with
                   | 5 ->
-                      if conf.zoom +. 0.01 > 0.1 then 0.1 else 0.01
+                      if conf.zoom +. 0.01 > 0.1 then 0.5 else 0.05
                   | _ ->
-                      if conf.zoom -. 0.1 < 0.1 then -0.01 else -0.1
+                      if conf.zoom -. 0.1 < 0.1 then -0.05 else -0.5
                 in
                 let zoom = conf.zoom -. incr in
                 setzoom zoom;
